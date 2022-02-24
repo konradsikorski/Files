@@ -153,7 +153,7 @@ namespace Files.Views.LayoutModes
 
         private void ItemManipulationModel_FocusFileListInvoked(object sender, EventArgs e)
         {
-            FileList.Focus(FocusState.Programmatic);
+            //if(FileList.IsLoaded) FileList.Focus(FocusState.Programmatic);
         }
 
         protected override void UnhookEvents()
