@@ -1078,6 +1078,16 @@ namespace Files.Views
                                 ContentPage.ItemManipulationModel.ScrollIntoView(itemToSelect);
                             }
                         }
+                        else
+                        {
+                            ListedItem firstItemToSelect = FilesystemViewModel.FilesAndFolders.FirstOrDefault();
+
+                            if (firstItemToSelect != null && ContentPage != null)
+                            {
+                                ContentPage.ItemManipulationModel.SetSelectedItem(firstItemToSelect);
+                                ContentPage.ItemManipulationModel.ScrollIntoView(firstItemToSelect);
+                            }
+                        }
                     }
                     break;
             }
